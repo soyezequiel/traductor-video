@@ -1,0 +1,12 @@
+.venv/
+node_modules/
+data/
+models/
+reports/*.wav
+reports/*.json
+extension/dist/
+extension/.vite/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.log

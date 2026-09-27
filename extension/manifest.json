@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Doblaje local al español argentino",
+  "version": "0.1.0",
+  "description": "Traduce y dobla videos de YouTube usando modelos locales.",
+  "minimum_chrome_version": "116",
+  "permissions": ["storage", "offscreen", "activeTab", "tabs"],
+  "host_permissions": ["http://127.0.0.1/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Doblaje local" },
+  "options_page": "options.html",
+  "content_scripts": [{
+    "matches": ["https://www.youtube.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doblaje-local"
+version = "0.1.0"
+description = "Doblaje local de YouTube al español argentino"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "httpx>=0.27,<1",
+  "yt-dlp>=2025.1",
+  "yt-dlp-ejs>=0.8,<1",
+  "faster-whisper>=1.1,<2",
+  "soundfile>=0.12,<1",
+  "sentencepiece>=0.2,<1",
+  "qwen-tts==0.1.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["doblaje*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

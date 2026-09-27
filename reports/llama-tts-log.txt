@@ -1,0 +1,18 @@
+﻿llama-tts.exe : 0.00.592.488 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug 
+in the model. its type will be overridden
+En línea: 2 Carácter: 34
++ ... e-Command { & '.\models\llama\llama-tts.exe' -m '.\models\llama-tts\Q ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (0.00.592.488 W ...l be overridden:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+0.00.596.504 W load: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+0.01.146.577 I cmn          init: llama threadpool init, n_threads = 8
+0.01.146.609 W init: embeddings required but some input tokens were not marked as outputs -> overriding
+0.01.583.854 W init_audio: audio input is in experimental stage and may have reduced quality:
+    https://github.com/ggml-org/llama.cpp/discussions/13759
+0.02.229.114 W init: embeddings required but some input tokens were not marked as outputs -> overriding
+0.03.057.724 I generated 37 frames, 142124 bytes of WAV audio (24000 Hz)
+0.03.057.733 I timings: prompt eval 0.03s + generation 0.65s + vocoder 0.15s = total 0.83s
+0.03.057.734 I          output audio = 2.96s (audio time = 3.57x process time)
+0.03.058.066 I wrote .\reports\llama-tts-test.wav
